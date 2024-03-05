@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="88cm" height="42cm" viewBox="-246 76 1753 822" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Background">
+    <g>
+      <rect style="fill: #d6d6d6; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="-244.209" y="77.5589" width="1750.51" height="819.364" rx="0" ry="0"/>
+      <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="631.048" y="491.122">
+        <tspan x="631.048" y="491.122"></tspan>
+      </text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="922.846,358.239 197.94,358.239 197.94,545.342 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="192.94,545.342 197.94,555.342 202.94,545.342 "/>
+    </g>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="727.998" y="299.07">
+      <tspan x="727.998" y="299.07">uart_imem_wr_en</tspan>
+      <tspan x="727.998" y="315.07">uart_imem_byte_en[3:0]</tspan>
+      <tspan x="727.998" y="331.07">uart_imem_addr[3:0]</tspan>
+      <tspan x="727.998" y="347.07">uart_imem_wr_data[31:0]</tspan>
+    </text>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="1428.35" y="339.954" width="41.8" height="38" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1449.25" y="362.835">
+        <tspan x="1449.25" y="362.835">in2</tspan>
+      </text>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="1428.35" y1="358.954" x2="1161.85" y2="358.268"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="1161.86,353.268 1151.85,358.243 1161.83,363.268 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="1428.35" y="441.554" width="51.1" height="38" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1453.9" y="464.435">
+        <tspan x="1453.9" y="464.435">out2</tspan>
+      </text>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="1150.85" y1="460.014" x2="1417.35" y2="460.533"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="1417.34,465.533 1427.35,460.552 1417.36,455.533 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="1428.35" y="216.17" width="46.9063" height="38" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1451.8" y="239.051">
+        <tspan x="1451.8" y="239.051">in7</tspan>
+      </text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" points="1428.35,235.17 1036.85,235.17 1036.85,296.352 "/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="1031.85,296.352 1036.85,306.352 1041.85,296.352 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #ff0000" points="979.846,307.352 980,307.352 980,126.645 -103.93,126.645 -103.93,244 "/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="-108.93,244 -103.93,254 -98.93,244 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" points="1428.35,235.17 1351,235.17 1351,862.86 255.704,862.86 255.704,826.45 "/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="260.704,826.45 255.704,816.45 250.704,826.45 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="922.846,409.126 561.103,409.126 561.103,631.264 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="556.103,631.264 561.103,641.264 566.103,631.264 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="119.597" y="642.05" width="272.215" height="173.4" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="255.704" y="700.631">
+        <tspan x="255.704" y="700.631">Instruction</tspan>
+        <tspan x="255.704" y="716.631">Memory</tspan>
+        <tspan x="255.704" y="732.631"></tspan>
+        <tspan x="255.704" y="748.631">64 bytes</tspan>
+        <tspan x="255.704" y="764.631">(16 words)</tspan>
+      </text>
+    </g>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-152.65" y="501">
+      <tspan x="-152.65" y="501">imem_rd_en</tspan>
+      <tspan x="-152.65" y="517">imem_rd_addr[3:0]</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-33.65" y="485">
+      <tspan x="-33.65" y="485">imem_rd_data[31:0]</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="27.35" y="336">
+      <tspan x="27.35" y="336">dmem_rd_en</tspan>
+      <tspan x="27.35" y="352">dmem_wr_en</tspan>
+      <tspan x="27.35" y="368">dmem_addr[1:0]</tspan>
+      <tspan x="27.35" y="384">dmem_wr_byte_en[3:0]</tspan>
+      <tspan x="27.35" y="400">dmem_wr_data[31:0]</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="29.35" y="298">
+      <tspan x="29.35" y="298">dmem_rd_data[31:0]</tspan>
+    </text>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="-217.93" y="255" width="228" height="203.548" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-103.93" y="320.655">
+        <tspan x="-103.93" y="320.655">RISC-V Core</tspan>
+        <tspan x="-103.93" y="336.655">Modified RV32I ISA</tspan>
+        <tspan x="-103.93" y="352.655"></tspan>
+        <tspan x="-103.93" y="368.655">16 Registers</tspan>
+        <tspan x="-103.93" y="384.655">No FENCE, ECALL, EBREAK</tspan>
+        <tspan x="-103.93" y="400.655">All Load/Store treated as LW/SW</tspan>
+      </text>
+    </g>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="727.998" y="387.906">
+      <tspan x="727.998" y="387.906">uart_dmem_rd_en</tspan>
+      <tspan x="727.998" y="403.906">uart_dmem_addr[1:0]</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1392.55" y="227.97">
+      <tspan x="1392.55" y="227.97">rst</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1376.55" y="374.672">
+      <tspan x="1376.55" y="374.672">rx_in</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1376.55" y="449.672">
+      <tspan x="1376.55" y="449.672">tx_out</tspan>
+    </text>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="1428.35" y="161.57" width="51.1" height="38" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1453.9" y="184.451">
+        <tspan x="1453.9" y="184.451">out7</tspan>
+      </text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" points="1428.35,235.17 1350.55,235.17 1350.55,180.57 1417.35,180.57 "/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="1417.35,185.57 1427.35,180.57 1417.35,175.57 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="1428.35" y="107.57" width="51.1" height="38" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1453.9" y="130.451">
+        <tspan x="1453.9" y="130.451">out6</tspan>
+      </text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #ff0000" points="979.846,307.352 979.846,126.57 1417.35,126.57 "/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="1417.35,131.57 1427.35,126.57 1417.35,121.57 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="1428.35" y="285.272" width="51.1" height="38" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1453.9" y="308.153">
+        <tspan x="1453.9" y="308.153">out5</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="1428.35" y="492.872" width="51.1" height="38" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1453.9" y="515.753">
+        <tspan x="1453.9" y="515.753">out4</tspan>
+      </text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="1428.35,358.954 1428.35,358.09 1379.55,358.09 1379.55,304.272 1417.35,304.272 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="1417.35,309.272 1427.35,304.272 1417.35,299.272 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="1150.85,460.014 1380.55,460.014 1380.55,511.872 1417.35,511.872 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="1417.35,516.872 1427.35,511.872 1417.35,506.872 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="167.578" y="556.342" width="40.4827" height="38" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="187.819" y="579.223">
+        <tspan x="187.819" y="579.223"></tspan>
+      </text>
+      <polygon style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="167.128,594.384 208.167,594.384 228.686,556.282 146.608,556.282 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="187.819" y1="594.342" x2="187.69" y2="631.05"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="182.69,631.032 187.654,641.05 192.69,631.068 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="-160.93,458.548 -160.93,533.374 177.699,533.374 177.699,545.342 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="172.699,545.342 177.699,555.342 182.699,545.342 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="323.758,642.05 323.758,502.196 -46.9296,502.196 -46.9296,469.548 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="-41.9296,469.548 -46.9296,459.548 -51.9296,469.548 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="424.996" y="642.264" width="272.215" height="173.4" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="561.103" y="700.845">
+        <tspan x="561.103" y="700.845">Data</tspan>
+        <tspan x="561.103" y="716.845">Memory</tspan>
+        <tspan x="561.103" y="732.845"></tspan>
+        <tspan x="561.103" y="748.845">16 bytes</tspan>
+        <tspan x="561.103" y="764.845">(4 words)</tspan>
+      </text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="10.07,407.661 493.05,407.661 493.05,631.264 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="488.05,631.264 493.05,641.264 498.05,631.264 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="629.157,642.264 629.157,305.887 21.07,305.887 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="21.07,300.887 11.07,305.887 21.07,310.887 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" points="1428.35,235.17 1351,235.17 1351,862.86 561.104,862.86 561.104,826.664 "/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="566.104,826.664 561.104,816.664 556.104,826.664 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="922.846" y="307.352" width="228" height="203.548" rx="0" ry="0"/>
+      <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1036.85" y="413.007">
+        <tspan x="1036.85" y="413.007">UART Top</tspan>
+      </text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #ff0000" points="922.846,460.014 247.268,460.014 247.268,575.334 229.426,575.334 "/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="229.426,570.334 219.426,575.334 229.426,580.334 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="629.158,642.264 629.158,613.09 1036.85,613.09 1036.85,521.9 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="1041.85,521.9 1036.85,511.9 1031.85,521.9 "/>
+    </g>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="727.998" y="603.57">
+      <tspan x="727.998" y="603.57">dmem_rd_data[31:0]</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="727.998" y="451.366">
+      <tspan x="727.998" y="451.366">uart_imem_ctrl</tspan>
+    </text>
+    <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="965" y="116">
+      <tspan x="965" y="116">reset</tspan>
+    </text>
+  </g>
+</svg>
