@@ -1065,7 +1065,7 @@ endgenerate
                            FpgaPins_Fpga_CPU_valid_tgt_pc_a3   ? FpgaPins_Fpga_CPU_tgt_pc_a3 :
                            FpgaPins_Fpga_CPU_valid_load_a3     ? FpgaPins_Fpga_CPU_inc_pc_a3 :
                                                 FpgaPins_Fpga_CPU_inc_pc_a1;
-                        assign imem_rd_en = ! (FpgaPins_Fpga_CPU_reset_a0 || FpgaPins_Fpga_CPU_reset_a1);
+                        assign imem_rd_en = ! (FpgaPins_Fpga_CPU_reset_a0);
                         assign imem_rd_addr[3:0] = FpgaPins_Fpga_CPU_pc_a0[5:2];
                
                      //_@1 // Instruction Decode, PC Increment
