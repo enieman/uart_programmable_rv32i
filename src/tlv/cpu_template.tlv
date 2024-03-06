@@ -86,7 +86,7 @@
    // | URL TO YOUR CUSTOM CPU BELOW |
    // |                              |
    // ================================
-   m4_include_lib(['https:/']['/raw.githubusercontent.com/enieman/uart_programmable_rv32i/main/src/tlv/cpu_custom.tlv)
+   m4_include_lib(['https:/']['/raw.githubusercontent.com/enieman/uart_programmable_rv32i/main/src/tlv/cpu_custom.tlv'])
 
 
 \TLV cpu()
@@ -94,28 +94,14 @@
    m5+riscv_gen()
    m5+riscv_sum_prog()
    m5_define_hier(IMEM, m5_NUM_INSTRS)
-   |cpu
-      @0
-         $reset = *reset;
-         
-         
-         
-      // ==================
-      // |                |
-      // | YOUR CODE HERE |
-      // |                |
-      // ==================
-      
-      // Note that pipesignals assigned here can be found under /fpga_pins/fpga.
-      
-      
-      
+   
    // Connect Custom CPU
-   m5+cpu_custom(|cpu, m5_IMEM_INDEX_CNT, 3, $reset, $imem_rd_en, $imem_rd_addr, $imem_rd_data, $dmem_rd_en, $dmem_wr_en, $dmem_addr, $dmem_wr_byte_en, $dmem_rd_data, $dmem_wr_data)
+   m5+cpu_custom(|cpu, m5_IMEM_INDEX_CNT, 3, *reset, $imem_rd_en, $imem_rd_addr, $imem_rd_data, $dmem_rd_en, $dmem_wr_en, $dmem_addr, $dmem_wr_byte_en, $dmem_rd_data, $dmem_wr_data)
    
    // Assert these to end simulation (before Makerchip cycle limit).
    // Note, for Makerchip simulation these are passed in uo_out to top-level module's passed/failed signals.
-   *passed = *top.cyc_cnt > 40;
+   // *passed = *top.cyc_cnt > 40;
+   *passed = (|cpu/xreg[10]>>5$value == (1+2+3+4+5+6+7+8+9));
    *failed = 1'b0;
    
    // Connect Tiny Tapeout outputs. Note that uio_ outputs are not available in the Tiny-Tapeout-3-based FPGA boards.
@@ -130,9 +116,9 @@
    //  o CPU visualization
    |cpu
       m4+imem(@1)    // Args: (read stage)
-      m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
+      m4+rf(@2, @3)  // Args: (read stage, write stage) - if equal, no register bypass is required
       m4+dmem(@4)    // Args: (read/write stage)
-
+      
    m4+cpu_viz(@4)    // For visualisation, argument should be at least equal to the last stage of CPU logic. @4 would work for all labs.
 
 \SV

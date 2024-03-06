@@ -112,8 +112,8 @@
          $rf_rd_index1[4:0] = $rs1;
          $rf_rd_index2[4:0] = $rs2;
          
-         $src1_value[31:0] = (>>1$rf_wr_en && (>>1$rd == $rs1)) ? >>1$rf_wr_data : $rf_rd_data1;
-         $src2_value[31:0] = (>>1$rf_wr_en && (>>1$rd == $rs2)) ? >>1$rf_wr_data : $rf_rd_data2;
+         $src1_value[31:0] = (>>1$rf_wr_en && (>>1$rf_wr_index == $rf_rd_index1)) ? >>1$rf_wr_data : $rf_rd_data1;
+         $src2_value[31:0] = (>>1$rf_wr_en && (>>1$rf_wr_index == $rf_rd_index2)) ? >>1$rf_wr_data : $rf_rd_data2;
          
          $alu_op1[31:0] =
             $is_auipc | $is_jump ? $pc :
