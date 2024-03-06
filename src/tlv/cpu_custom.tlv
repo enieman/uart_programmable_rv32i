@@ -18,7 +18,7 @@
             >>3$valid_tgt_pc   ? >>3$tgt_pc :
             >>3$valid_load     ? >>3$inc_pc :
                                  >>1$inc_pc;
-         $_imem_rd_en = ! ($reset || >>1$reset);
+         $_imem_rd_en = ! ($reset);
          $_imem_rd_addr[m5_calc((#_IMEM_NUM_ADDR_BITS)-1):0] = $pc[m5_calc((#_IMEM_NUM_ADDR_BITS)+1):2];
          
       @1 // Instruction Decode, PC Increment

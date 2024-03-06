@@ -47,17 +47,17 @@ async def reset_dut(dut):
   await ClockCycles(dut.clk, 10)
   dut.rst_n.value = 1
 
-async def send_program(dut, file_name):
+async def send_program(dut, program):
   # Open binary file, read contents, close file
-  bin_file = open(file_name, "rb")
+  bin_file = open("bin/" + program + ".bin", "rb")
   data_list = list(bin_file.read())
   bin_file.close()
   # Send data to dut
-  dut._log.info('Writing "' + file_name + '" to I-Memory...')
+  dut._log.info('Writing "' + program + '.bin" to I-Memory...')
   for i in range(0, len(data_list)):
     data = await send_packet(dut, data_list[i])
     dut._log.info("Sent Byte %d of %d (0x%0.2X)" % ((i+1), len(data_list), data))
-  dut._log.info('Write of "' + file_name + '" to I-Memory complete.')
+  dut._log.info('Write of "' + program + '.bin" to I-Memory complete.')
 
 async def read_data(dut):
   await cocotb.start(send_packet(dut, 0x55))
@@ -68,12 +68,24 @@ async def read_data(dut):
     dut._log.info("D-Memory Word %0.2d: 0x%0.2X%0.2X_%0.2X%0.2X" % (i, data_list[4*i+3], data_list[4*i+2], data_list[4*i+1], data_list[4*i]))
   return(data_list)
 
-async def run_test_program(dut, program_file_name):
+def check_results(program, data_out):
+  solution_file = open("solutions/" + program + ".txt", "r")
+  lines = solution_file.readlines()
+  solution_file.close()
+  test_pass = True
+  for i in range(0, len(lines)):
+    word = int(lines[i], 16)
+    for j in range(0,4):
+      test_pass = test_pass and (((word >> 8*j) & 0xFF) == data_out[4*i + j])
+  return(test_pass)
+
+async def run_test_program(dut, program):
+  dut._log.info('Running "' + program + '" program...')
   await reset_dut(dut)
-  await send_program(dut, program_file_name)
-  dut._log.info('Excecuting "' + program_file_name + '" on RV32I core...')
-  await ClockCycles(dut.clk, 100) # Give a good amount of time for program to terminate
-  return(await read_data(dut))
+  await send_program(dut, program)
+  dut._log.info('Excecuting "' + program + '" on RV32I core...')
+  await ClockCycles(dut.clk, 200) # Give a good amount of time for program to terminate
+  return(check_results(program, await read_data(dut)))
 
 @cocotb.test()
 async def test_top(dut):
@@ -84,12 +96,6 @@ async def test_top(dut):
   cocotb.start_soon(clock.start())
   
   # Run through test programs
-  program_list = ["rw_dmem", "rw_reg", "wr_reg_zero"] # Leaving out "sum_one_to_nine" for now
+  program_list = ["bne_beq_blt", "bge_bltu_bgeu", "rw_dmem", "rw_reg", "sum_one_to_nine", "wr_reg_zero"]
   for program in program_list:
-    dut._log.info('Running "' + program + '.bin"')
-    output = await run_test_program(dut, "bin/" + program + ".bin")
-
-  # Run "sum_one_to_nine" program
-  dut._log.info('Running "sum_one_to_nine.bin"')
-  output = await run_test_program(dut, "bin/sum_one_to_nine.bin")
-  assert output[4] == 1+2+3+4+5+6+7+8+9
+    assert await run_test_program(dut, program)
