@@ -1,8 +1,7 @@
 module uart_top #(
    parameter COUNTER_WIDTH = 24,       // Width of the clock-cycle counter used in auto-baud-detection
    parameter IMEM_BYTE_ADDR_WIDTH = 6, // Width of the byte-level address; default to 64 bytes of storage
-   parameter DMEM_BYTE_ADDR_WIDTH = 6, // Width of the byte-level address; default to 64 bytes of storage
-   parameter BYTES_PER_WORD = 4)       // Number of bytes in one word; this MUST be a power of 2; default is 4 (32-bit word)
+   parameter DMEM_BYTE_ADDR_WIDTH = 6) // Width of the byte-level address; default to 64 bytes of storage
 (
    input  wire clk,
    // User Interface
@@ -15,13 +14,13 @@ module uart_top #(
    output wire imem_ctrl,
    output wire imem_wr_en,
    output wire [IMEM_BYTE_ADDR_WIDTH-3:0] imem_addr,
-   output wire [BYTES_PER_WORD-1:0] imem_byte_en,
-   output wire [8*BYTES_PER_WORD-1:0] imem_wr_data,
+   output wire [3:0] imem_byte_en,
+   output wire [31:0] imem_wr_data,
    // D-Memory Interface
    output wire dmem_ctrl,
    output wire dmem_rd_en,
    output wire [DMEM_BYTE_ADDR_WIDTH-3:0] dmem_addr,
-   input  wire [8*BYTES_PER_WORD-1:0] dmem_rd_data);
+   input  wire [31:0] dmem_rd_data);
 
    wire rx_ready, tx_empty, tx_error, tx_req;
    wire [IMEM_BYTE_ADDR_WIDTH-1:0] imem_byte_addr;
@@ -70,8 +69,7 @@ module uart_top #(
       .dmem_addr(dmem_byte_addr));
 
    byte_to_word #(
-      .BYTE_ADDR_WIDTH(IMEM_BYTE_ADDR_WIDTH),
-      .BYTES_PER_WORD(BYTES_PER_WORD))
+      .BYTE_ADDR_WIDTH(IMEM_BYTE_ADDR_WIDTH))
    byte_to_word0 (
       .byte_addr_in(imem_byte_addr),
       .byte_data_in(rx_data),
@@ -80,8 +78,7 @@ module uart_top #(
       .word_data_out(imem_wr_data));
    
    word_to_byte #(
-      .BYTE_ADDR_WIDTH(DMEM_BYTE_ADDR_WIDTH),
-      .BYTES_PER_WORD(BYTES_PER_WORD))
+      .BYTE_ADDR_WIDTH(DMEM_BYTE_ADDR_WIDTH))
    word_to_byte0 (
       .byte_addr_in(dmem_byte_addr),
       .byte_data_out(tx_data),

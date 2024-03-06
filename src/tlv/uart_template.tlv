@@ -233,8 +233,7 @@ module m5_user_module_name (
    uart_top #(
       .COUNTER_WIDTH(COUNTER_WIDTH),
       .IMEM_BYTE_ADDR_WIDTH(IMEM_BYTE_ADDR_WIDTH),
-      .DMEM_BYTE_ADDR_WIDTH(DMEM_BYTE_ADDR_WIDTH),
-      .BYTES_PER_WORD(4))
+      .DMEM_BYTE_ADDR_WIDTH(DMEM_BYTE_ADDR_WIDTH))
    uart_top0 (
       .clk(clk),
       .rst(rst),
@@ -253,8 +252,7 @@ module m5_user_module_name (
 
    // I-Memory
    reg_file #(
-      .BYTE_ADDR_WIDTH(IMEM_BYTE_ADDR_WIDTH),
-      .BYTES_PER_WORD(4))
+      .BYTE_ADDR_WIDTH(IMEM_BYTE_ADDR_WIDTH))
    imem0 (
       .clk(clk),
       .rst(rst),
@@ -271,8 +269,7 @@ module m5_user_module_name (
 
    // D-Memory
    reg_file #(
-      .BYTE_ADDR_WIDTH(DMEM_BYTE_ADDR_WIDTH),
-      .BYTES_PER_WORD(4))
+      .BYTE_ADDR_WIDTH(DMEM_BYTE_ADDR_WIDTH))
    dmem0 (
       .clk(clk),
       .rst(rst),

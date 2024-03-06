@@ -1,7 +1,5 @@
 module reg_file #(
    parameter BYTE_ADDR_WIDTH = 6, // Width of the byte-level address; default to 6 address bits (64 bytes)
-   parameter BYTES_PER_WORD = 4,  // Number of bytes in one word; this MUST be a power of 2; default is 4 (32-bit word)
-   localparam BYTES_PER_WORD_LOG2 = $clog2(BYTES_PER_WORD),
    localparam NUM_BYTES = 2**BYTE_ADDR_WIDTH)
 (
    input  wire clk,
@@ -28,25 +26,30 @@ module reg_file #(
          for (integer unsigned i = 0; i < NUM_BYTES; i++)
             register[i] = 8'h00;
       else if (wr_en) begin
-         for (integer unsigned i = 0; i < BYTES_PER_WORD; i++ )
-            if (byte_en[i])
-               register[{wr_addr, i[BYTES_PER_WORD_LOG2-1:0]}] <= wr_data[8*i +: 8];
+         if (byte_en[3]) register[{wr_addr, 2'b11}] <= wr_data[31:24];
+         if (byte_en[2]) register[{wr_addr, 2'b10}] <= wr_data[23:16];
+         if (byte_en[1]) register[{wr_addr, 2'b01}] <= wr_data[15:8];
+         if (byte_en[0]) register[{wr_addr, 2'b00}] <= wr_data[7:0];
       end
    end
    
    // Read Buffers
    always @(posedge clk) begin
       if (rst) begin
-         rd_data0 <= {(8*BYTES_PER_WORD){1'b0}};
-         rd_data1 <= {(8*BYTES_PER_WORD){1'b0}};
+         rd_data0 <= 32'h0000_0000;
+         rd_data1 <= 32'h0000_0000;
       end
       else begin
-         if (rd_en0)
-            for (integer unsigned i = 0; i < BYTES_PER_WORD; i++)
-               rd_data0[8*i +: 8] <= register[{rd_addr0, i[BYTES_PER_WORD_LOG2-1:0]}];
-         if (rd_en1)
-            for (integer unsigned i = 0; i < BYTES_PER_WORD; i++)
-               rd_data1[8*i +: 8] <= register[{rd_addr1, i[BYTES_PER_WORD_LOG2-1:0]}];
+         if (rd_en0) rd_data0 <= {
+            register[{rd_addr0, 2'b11}],
+            register[{rd_addr0, 2'b10}],
+            register[{rd_addr0, 2'b01}],
+            register[{rd_addr0, 2'b00}]};
+         if (rd_en1) rd_data1 <= {
+            register[{rd_addr1, 2'b11}],
+            register[{rd_addr1, 2'b10}],
+            register[{rd_addr1, 2'b01}],
+            register[{rd_addr1, 2'b00}]};
       end
    end
 
