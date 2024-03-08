@@ -96,6 +96,8 @@ async def test_top(dut):
   cocotb.start_soon(clock.start())
   
   # Run through test programs
-  program_list = ["bne_beq_blt", "bge_bltu_bgeu", "rw_dmem", "rw_reg", "sum_one_to_nine", "wr_reg_zero"]
+  program_file = open("programs.f", "r")
+  program_list = program_file.read().splitlines()
+  program_file.close()
   for program in program_list:
     assert await run_test_program(dut, program)
